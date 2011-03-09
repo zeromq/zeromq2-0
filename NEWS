@@ -1,3 +1,12 @@
+0MQ version 2.0.11 (Stable), released on 2011/03/xx
+===================================================
+
+Bug fixes:
+----------
+* Backported fix to issue 175 (reaching HWM on XREP sockets could cause
+  a crash) (Ilja Golshtein)
+
+
 0MQ version 2.0.10 (Stable), released on 2010/10/15
 ===================================================
 

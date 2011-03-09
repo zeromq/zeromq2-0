@@ -162,6 +162,11 @@ int zmq::xrep_t::xsend (zmq_msg_t *msg_, int flags_)
         //  Remember the outgoing pipe.
         current_out = it->second.writer;
 
+        if (!current_out->check_write ()) {
+            it->second.active = false;
+            errno = EAGAIN;
+            return -1;
+        }
         return 0;
     }
 
