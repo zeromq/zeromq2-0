@@ -169,10 +169,12 @@ ZMQ_EXPORT int zmq_term (void *context);
 #define ZMQ_SUB 2
 #define ZMQ_REQ 3
 #define ZMQ_REP 4
-#define ZMQ_XREQ 5
-#define ZMQ_XREP 6
+#define ZMQ_DEALER 5
+#define ZMQ_ROUTER 6
 #define ZMQ_PULL 7
 #define ZMQ_PUSH 8
+#define ZMQ_XREQ ZMQ_DEALER        /*  Old alias, remove in 3.x               */
+#define ZMQ_XREP ZMQ_ROUTER        /*  Old alias, remove in 3.x               */
 #define ZMQ_UPSTREAM ZMQ_PULL      /*  Old alias, remove in 3.x               */
 #define ZMQ_DOWNSTREAM ZMQ_PUSH    /*  Old alias, remove in 3.x               */
 
@@ -228,7 +230,7 @@ typedef struct
 ZMQ_EXPORT int zmq_poll (zmq_pollitem_t *items, int nitems, long timeout);
 
 /******************************************************************************/
-/*  Devices - Experimental.                                                   */
+/*  Built-in devices                                                          */
 /******************************************************************************/
 
 #define ZMQ_STREAMER 1

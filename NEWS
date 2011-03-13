@@ -11,6 +11,9 @@ Bug fixes:
 Changes
 -------
 
+* ZMQ_DEALER and ZMQ_ROUTER macros provided to ease upgrade to 0MQ/3.0.
+  These are scheduled to replace ZMQ_XREQ and ZMQ_XREP in that version.
+
 * Added man page for zmq_device(3) which was hereto undocumented (Pieter 
   Hintjens).
 
