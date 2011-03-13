@@ -8,6 +8,15 @@ Bug fixes:
 
 * Fix to C++ binding to properly close sockets (Guido Goldstein).
 
+Changes
+-------
+
+* Added man page for zmq_device(3) which was hereto undocumented (Pieter 
+  Hintjens).
+
+* Removed zmq_queue(3), zmq_forwarder(3), zmq_streamer(3) man pages 
+  (Pieter Hintjens).
+
 
 0MQ version 2.0.10 (Stable), released on 2010/10/15
 ===================================================
